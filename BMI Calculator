@@ -1,0 +1,19 @@
+name = input("Please say your name: ")
+weight = float(input(name + " enter your weight in kilograms: "))
+height = float(input(name + " enter your height in meters: "))
+
+# BMI formula
+bmi = weight / (height ** 2)
+print("Your BMI is:", round(bmi, 2))
+
+# WHO classification for Indians
+if bmi < 18.5:
+    print(name + ", you are Underweight (Nutritional deficiency)")
+elif 18.5 <= bmi <= 22.9:
+    print(name + ", you are Normal weight (Low risk)")
+elif 23 <= bmi <= 24.9:
+    print(name + ", you are Overweight (Increased risk)")
+elif 25 <= bmi <= 29.9:
+    print(name + ", you are Obese Class I (High risk)")
+else:  # bmi >= 30
+    print(name + ", you are Obese Class II (Very high risk)")
